@@ -1,0 +1,12 @@
+image: gcc:11
+
+stages:
+  - test
+
+test:
+  stage: test
+  script:
+    - apt update && apt install -y cmake
+    - cmake .
+    - make
+    - make test

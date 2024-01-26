@@ -1,0 +1,9 @@
+#!/bin/sh -x
+# Script généré automatiquement à partir de test_autorestart.sh.in
+
+BASE=@CMAKE_RUNTIME_OUTPUT_DIRECTORY@
+export PATH="$BASE:$PATH"
+
+autorestart montecarlo | tee log.txt
+
+grep -i "Success" log.txt
