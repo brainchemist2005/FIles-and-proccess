@@ -1,0 +1,21 @@
+# ninja log v5
+0	4	1706293023543094493	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	f49ee99e40d2e7d8
+0	4	1706293023543094493	/home/zack/Desktop/INF3173/FIles-and-proccess/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir	f49ee99e40d2e7d8
+4	631	1706293024167098359	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	6483e84750e1d81
+4	631	1706293024167098359	/home/zack/Desktop/INF3173/FIles-and-proccess/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download	6483e84750e1d81
+631	634	1706293024171098383	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	1bdc597014759325
+631	634	1706293024171098383	/home/zack/Desktop/INF3173/FIles-and-proccess/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update	1bdc597014759325
+634	638	1706293024175098409	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	a9c451418da74dc8
+634	638	1706293024175098409	/home/zack/Desktop/INF3173/FIles-and-proccess/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch	a9c451418da74dc8
+638	640	1706293024179098433	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	48ff5e4afed7827a
+638	640	1706293024179098433	/home/zack/Desktop/INF3173/FIles-and-proccess/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure	48ff5e4afed7827a
+640	643	1706293024179098433	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	4a534a4042faf00c
+640	643	1706293024179098433	/home/zack/Desktop/INF3173/FIles-and-proccess/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build	4a534a4042faf00c
+643	645	1706293024183098458	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	1d93859b3d972b65
+643	645	1706293024183098458	/home/zack/Desktop/INF3173/FIles-and-proccess/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install	1d93859b3d972b65
+645	648	1706293024187098483	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	92b3f6b5969fdf98
+645	648	1706293024187098483	/home/zack/Desktop/INF3173/FIles-and-proccess/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test	92b3f6b5969fdf98
+648	652	1706293024191098507	CMakeFiles/googletest-populate-complete	81e38718befdfa2c
+648	652	1706293024191098507	googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	81e38718befdfa2c
+648	652	1706293024191098507	/home/zack/Desktop/INF3173/FIles-and-proccess/cmake-build-debug/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete	81e38718befdfa2c
+648	652	1706293024191098507	/home/zack/Desktop/INF3173/FIles-and-proccess/cmake-build-debug/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done	81e38718befdfa2c

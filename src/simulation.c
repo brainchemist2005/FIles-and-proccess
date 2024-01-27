@@ -41,9 +41,11 @@ void simulate_montecarlo(FILE* logfile,             //
       if (callback) {
         callback(sim, mol);
       }
+      save_state(sim,"../backup_file");
       /*
        * Simulation d'un bogue fatal. Ne pas modifier.
        */
+
        bug(sim->num_restart);
     }
   }

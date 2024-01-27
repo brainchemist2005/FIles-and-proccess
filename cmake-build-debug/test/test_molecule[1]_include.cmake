@@ -1,0 +1,5 @@
+if(EXISTS "/home/zack/Desktop/INF3173/FIles-and-proccess/cmake-build-debug/test/test_molecule[1]_tests.cmake")
+  include("/home/zack/Desktop/INF3173/FIles-and-proccess/cmake-build-debug/test/test_molecule[1]_tests.cmake")
+else()
+  add_test(test_molecule_NOT_BUILT test_molecule_NOT_BUILT)
+endif()

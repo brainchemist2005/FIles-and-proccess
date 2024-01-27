@@ -1,0 +1,3 @@
+/home/zack/Desktop/INF3173/FIles-and-proccess/cmake-build-debug/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir
+/home/zack/Desktop/INF3173/FIles-and-proccess/cmake-build-debug/_deps/googletest-subbuild/CMakeFiles/edit_cache.dir
+/home/zack/Desktop/INF3173/FIles-and-proccess/cmake-build-debug/_deps/googletest-subbuild/CMakeFiles/rebuild_cache.dir
