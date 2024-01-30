@@ -1,0 +1,5 @@
+if(EXISTS "/home/rabahlemaici/Bureau/FIles-and-proccess/build/test/test_molecule[1]_tests.cmake")
+  include("/home/rabahlemaici/Bureau/FIles-and-proccess/build/test/test_molecule[1]_tests.cmake")
+else()
+  add_test(test_molecule_NOT_BUILT test_molecule_NOT_BUILT)
+endif()
