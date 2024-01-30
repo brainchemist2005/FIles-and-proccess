@@ -1,0 +1,5 @@
+if(EXISTS "/home/rabahlemaici/Bureau/FIles-and-proccess/build/test/test_serialize[1]_tests.cmake")
+  include("/home/rabahlemaici/Bureau/FIles-and-proccess/build/test/test_serialize[1]_tests.cmake")
+else()
+  add_test(test_serialize_NOT_BUILT test_serialize_NOT_BUILT)
+endif()
