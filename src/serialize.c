@@ -11,19 +11,22 @@ int save_state(struct state* s, const char* filename) {
 
   FILE *file;
 
-  file = fopen(filename, "wb");
+  file = open(FILENAME, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR | O_BINARY);
 
-  if(file == NULL) {
-    printf("An error occured creating the file");
-    exit(1);
+  if (file_descriptor == -1) {
+    perror("An error occurred creating the file");
+    exit(EXIT_FAILURE);
   }
 
+  printf("%ld %ld\n", s->points_total, s->points_inside);
 
-  fwrite(&(s->points_inside), sizeof(long), 1, file);
-  fwrite(&(s->points_total), sizeof(long), 1, file);
-  fwrite(&(s->num_restart), sizeof(int), 1, file);
+  // Write the struct members to the file using write
+  write(file_descriptor, &(s->points_inside), sizeof(long));
+  write(file_descriptor, &(s->points_total), sizeof(long));
+  write(file_descriptor, &(s->num_restart), sizeof(int));
 
-  fclose(file);
+  // Close the file
+  close(file_descriptor);
   return 0;
 }
 
