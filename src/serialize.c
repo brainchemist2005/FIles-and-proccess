@@ -18,7 +18,7 @@ int save_state(struct state* s, const char* filename) {
     exit(EXIT_FAILURE);
   }
 
-  printf("HELLOOOOO%ld %ld\n", s->points_total, s->points_inside);
+  printf("%s\n", filename);
 
   // Write the struct members to the file using write
   write(file_descriptor, &(s->points_inside), sizeof(long));
@@ -32,7 +32,19 @@ int save_state(struct state* s, const char* filename) {
 
 // TODO: charger la structure state depuis le fichier passé en argument.
 int load_state(struct state* s, const char* filename) {
-  // Incrémenter ne nombre de redémarrage, ne pas modifier.
+
+  int file_descriptor = open("../build/backup_file", O_RDONLY);
+  if (file_descriptor == -1) {
+    perror("Error opening the file");
+    exit(EXIT_FAILURE);
+  }
+
+  read(file_descriptor, &(s->points_inside), sizeof(long));
+  read(file_descriptor, &(s->points_total), sizeof(long));
+  read(file_descriptor, &(s->num_restart), sizeof(int));
+
+  close(file_descriptor);
+
   s->num_restart++;
   return 0;
 }
