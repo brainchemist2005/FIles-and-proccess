@@ -13,27 +13,22 @@ int save_state(struct state* s, const char* filename) {
 
   file_descriptor = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
 
-  if (file_descriptor == -1) {
-    perror("An error occurred creating the file");
-    exit(EXIT_FAILURE);
+  if (file_descriptor != -1) {
+    write(file_descriptor, &(s->points_inside), sizeof(long));
+    write(file_descriptor, &(s->points_total), sizeof(long));
+    write(file_descriptor, &(s->num_restart), sizeof(int));
+
+    // Close the file
+    close(file_descriptor);
   }
-
-  printf("%s\n", filename);
-
-  // Write the struct members to the file using write
-  write(file_descriptor, &(s->points_inside), sizeof(long));
-  write(file_descriptor, &(s->points_total), sizeof(long));
-  write(file_descriptor, &(s->num_restart), sizeof(int));
-
-  // Close the file
-  close(file_descriptor);
   return 0;
+
 }
 
 // TODO: charger la structure state depuis le fichier passé en argument.
 int load_state(struct state* s, const char* filename) {
 
-  int file_descriptor = open("../build/backup_file", O_RDONLY);
+  int file_descriptor = open(filename, O_RDONLY);
   if (file_descriptor == -1) {
     perror("Error opening the file");
     exit(EXIT_FAILURE);

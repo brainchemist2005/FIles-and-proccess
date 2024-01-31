@@ -26,6 +26,8 @@ int main() {
   sim->points_total = 0;
   sim->num_restart = 0;
 
+  load_state(sim,"../backup_file");
+
   // TODO: charger la dernière sauvegarde du fichier
 
   // Imprime les information sur la simulation
