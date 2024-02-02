@@ -31,7 +31,7 @@ int load_state(struct state* s, const char* filename) {
   int file_descriptor = open(filename, O_RDONLY);
   if (file_descriptor == -1) {
     perror("Error opening the file");
-    exit(EXIT_FAILURE);
+    return 0;
   }
 
   read(file_descriptor, &(s->points_inside), sizeof(long));
@@ -42,4 +42,5 @@ int load_state(struct state* s, const char* filename) {
 
   s->num_restart++;
   return 0;
+
 }

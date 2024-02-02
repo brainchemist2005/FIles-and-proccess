@@ -11,6 +11,10 @@ static const char* k_state_file = "state.bin";
 
 // TODO: définir une fonction de rappel pour sauvegarder la progression. Passer cette fonction comme
 // dernier argument à simulate_montecarlo()
+int save_progress_callback(struct state* sim, struct molecule* mol) {
+  save_state(sim, "../backup_file");
+  return 0;
+}
 
 int main() {
   // initialisation du programme, ne pas modifier
@@ -40,13 +44,14 @@ int main() {
   }
 
   unsigned long num_points = (1UL << 20);
-  simulate_montecarlo(stdout, sim, mol, num_points, NULL);
+  simulate_montecarlo(stdout, sim, mol, num_points, save_progress_callback);
 
   double final_volume = compute_volume(sim, mol);
   fprintf(stdout, "Molecule volume: %f\n", final_volume);
   fprintf(stdout, "Simulation completed with success!\n");
 
   // TODO: supprimer le fichier d'état en cas de succès. Le calcul recommencera du début.
+  unlink("../backup_file");
 
   return 0;
 }
